@@ -9,7 +9,7 @@
             display:inline-block; width:5px; height:5px;   
             background:#fff; border:1px solid #000; transition: 0.5s;
             
-            &.on {background:#000; height: 20px;}
+            &.on {background:#ddd; height: 20px;}
             &:hover { background: #000; }
             /*
             &.on+span { display: inline-block;  }
