@@ -23,7 +23,7 @@ $header_ht : 80px;
                     float:left;
                     >a {
                         display:block; width:200px; height:$header_ht; letter-spacing:1px;
-                        font:bold 14px 'arial'; color:#555; text-align:center; line-height:$header_ht;
+                        font:bold 14px 'arial'; color:#fff; text-align:center; line-height:$header_ht;
 
                         &:hover {
                             background:#555; color:#fff;
