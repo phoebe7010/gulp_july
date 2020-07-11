@@ -1,0 +1,59 @@
+#icons {
+    width: 100%;  padding: 100px 0 50px;
+   .inner {
+       width:1180px;  margin: 0 auto; 
+       h1 {
+        font:bold 24px/1 'Noto Sans KR'; color:#333; text-align: center; margin-bottom: 50px; 
+          }
+       ul#icon{
+           width:100%;  
+           &::after { clear: both; display: block; content:''; }
+          >li { 
+              width:calc(100%/6); float: left; 
+               
+              $wid:80px; 
+              >div { width: $wid; height: $wid; position: relative; margin: 0 auto; 
+                  >a { display: block; width: 100%; height:100%; text-align: center; 
+                    >i { font-size: 60px;transform: scale(1); line-height:$wid; ;  color:#777; transition: 0.5s;  }   
+                }
+              }
+              >p { text-align: center; font:16px/1 'Noto Sans KR'; color:#333; margin-top: 20px;}
+              &:hover {
+                div>a>i {  color:#333;  transform: scale(1.1); } 
+              }   
+            }
+        }
+    }
+}
+
+@media screen and (max-width:$tablet){
+   #icons {
+       
+      .inner {
+          width:100%;  
+          ul#icon{
+             
+             >li { 
+                 width:calc(100%/3);  
+                  
+             }
+         }
+      }
+  }
+}
+
+/* mobile */
+@media screen and (max-width:$mobile){
+   #icons { 
+       padding: 100px 0 50px;
+      .inner {
+           ul#icon{
+               >li { 
+                   width:50%; 
+                   
+               }
+           }
+      } 
+       
+  }
+}

@@ -1,0 +1,160 @@
+#tab {
+    width:100%; padding:100px 0px;
+    .inner {
+        width:100%; margin:0px auto; box-sizing:border-box;
+/*
+        h1 {
+            font:bold 16px/1 'arial'; color:#555; text-align:center;
+            margin-bottom:50px;
+            &::after {
+                content:''; display:block; width:70px; height:1px; background:#555; margin:0px auto; margin-top:20px;
+            }
+        }
+*/
+        h1 { 
+            font: bold 24px/1 "Noto Sans KR";    color: #333;    text-align: center;
+             margin-bottom: 50px;
+        }
+
+        .wrap {
+            width:100%; 
+            .btn {
+                  
+                width:580px; height:50px; margin: 0 auto;
+                >li {
+                    float:left; width:280px; margin-right: 0px; 
+                    &:last-child { margin-right: 0;}
+                    >a {
+                        display:block; width:100%; height:100%;
+                        font:bold 14px/50px 'arial';text-align:center;
+                        border:1px solid #222; box-sizing:border-box; background:#fff; color:#555;
+
+                        &.on {background:#222; color:#fff;  }
+                    }
+                }
+                &::after {content:''; display:block; clear:both;}
+            }
+
+            .panel {
+                //tab box
+                >div {  
+                    width:100%; box-sizing:border-box;
+                    display:none;  background: #555; padding: 100px 50px;
+                     
+
+                     .txt { width:1180px; margin: 0 auto; position: relative;  padding: 30px; box-sizing: border-box;    
+                         >div { max-width: 1180px;  width:100%;    
+                                    
+                            h2 { 
+                                font:24px/1.4 'arial'; color:#fff;  opacity:0; transform:translateX(50px);
+                               transition:0.5s; margin-bottom: 20px;
+                           }
+                           span { 
+                               font:bold 35px/1.4 'arial'; color:#fff; margin-right: 20px; opacity:0; transform:translateX(150px);  display: inline-block;                             transition:0.5s;
+                            }
+                             p { margin-top: 20px;
+                               font:16px/1.4 'arial'; color:#aaa;
+                               opacity:0; transform:translateX(50px);                               transition:0.5s;
+                           }             
+                         } 
+                                
+    
+                     }  
+ 
+                     &.on {   
+                        .txt{
+                            >div{ 
+                                h2 {opacity:1; transform:translateX(0px);}    
+                                span { opacity: 1; transform:translateX(0px);}         
+                                p {opacity:1; transform:translateX(0px);}
+                            }
+                        }
+                        
+                   }
+                   background-repeat: no-repeat; background-size: cover;
+                   
+                   &#tab1 { background-image: url(../img/t1.jpg); background-color: #1a1819; background-position: center right -400px; }
+                   &#tab2 { background-image: url(../img/t2.jpg); background-position:center right -400px; background-color:#1b1b1b;}
+                }
+               
+                
+            }
+        }
+    }
+}
+
+@media screen and (max-width:$tablet){
+    #tab { padding:100px 0px 0px;
+        .inner {  
+            .wrap {
+                
+                .btn {
+                    width:540px;  
+                    >li {
+                          width:270px; margin-right: 0px;  
+                    } 
+                }
+                .panel {
+                    //tab box
+                    >div { padding: 100px 20px;
+                         .txt {  width: 100%;    
+                            >div {  
+                                    
+                                h2 { 
+                                    font:20px/1.4 'arial';   
+                               }
+                               span { 
+                                   font:bold 30px/1.4 'arial'; 
+                                }
+                                 p {  
+                                   font:12px/1.4 'arial';  
+                               }             
+                            } 
+                         }  
+     
+                         &#tab1 { background-position: center right -100px; }
+                         &#tab2 { background-position:center right -100px; }     
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:$mobile){
+    #tab { padding:50px 0px 0px;
+        .inner {  
+            .wrap {
+               
+                .btn {
+                    width:100%;  
+                    >li {
+                          width:50%; margin-right: 0px;  
+                    } 
+                }
+                .panel {
+                    //tab box
+                    >div { padding: 50px 20px;
+                         .txt {   width:100%; transform: translateX(0);
+                            >div {  transform: translateX(0px);
+                                    padding: 20px;  
+                                h2 { 
+                                    font:18px/1.4 'arial';   
+                               }
+                               span { 
+                                   font:bold 24px/1.4 'arial'; 
+                                }
+                                 p {  
+                                   font:12px/1.4 'arial';  
+                               }             
+                            } 
+                         }  
+     
+                         
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,80 @@
+gulp 세팅 방법
+
+----중요-----
+처음 gulp 세팅순서
+0. vscode를 관리자권한으로 열기 
+1.템플릿 폴더를 vscode에 등록
+2.vscode의 터미널창 열기
+3.npm install gulp-cli -g 입력후 엔터
+4.npm install gulp -D 입력후 엔터
+5.npm install 입력후 엔터 (명령어 입력창이 다시 나올떄까지 기다림)
+6.Set-ExecutionPolicy RemoteSigned 입력후 엔터 (터미널창 관리자권한 부여)
+7.gulp (gulp 빌드시작)
+
+** 혹시 위의 방법대로 해도 오류가나면
+gulp실행 아이콘에 마우스 오른클릭 뒤 관리자권한으로 실행해서 연뒤 
+6번부터 다시시작
+
+
+
+
+
+1. vscode에 파일 등록
+2. vscode view - terminal 실행 
+
+npm install gulp-cli -g
+npm install gulp -D
+npm install
+gulp
+
+vscode 관리자 권한 오류시 
+
+Set-ExecutionPolicy RemoteSigned
+
+gulp
+
+
+
+파일 보낼때는 src 폴더만 
+
+
+
+gulp 템플릿 파일을 먼저 세팅 
+
+sass 작업했던 폴더에서 
+복사 붙여넣기 
+--
+src> html > include>main - index 안에 포함될 파트 html 파일 생성 
+src> html > include>sub - sub페이지 안에 포함될 파트 html 파일 생성 
+src > html > index.html - index 페이지! 안에 포함될 html 파트명 include 시킨다 
+src > html > sub - 서브페이지를 서브페이지 이름으로 생성
+
+폴더명 > js - jQuery 파일, easing 파일, 플러그인 파일, custom.js 파일 등 배치 
+src > js - banner.js , scroll.js, tab.js 등 파트별 js 파일 배치 
+
+
+src > scss > include - 공통 scss 파일 배치 footer, header, reset 등 보통은 sub 페이지용 헤더 푸터와 범용 파일 
+src > scss > main - index 페이지용! index 페이지 내 파트별 코드에 따른 파트별 scss 배치 
+					index용 header, footer 포함
+src > scss > sub - sub 페이지 이름의 scss 
+
+src> scss >style.scss 에 모든 scss 파일명 include 
+
+배치되는 파일명 (main,include, sub 폴더 안) 은 언더바 붙여서 생성 
+style.scss는 언더바 없이 생성 
+
+img 폴더는 최상위 폴더 아래 css , img , js, src 와 같은 순위 배치 
+
+여기서 src 는 작업 폴더 - ftp 올릴 때는 빼고 올린다. 
+
+
+			
+
+
+
+
+
+
+
+
+style.scss 에 파트별 scss (sass 작업했던 것) 인클루드 하기 

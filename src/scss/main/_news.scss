@@ -1,0 +1,83 @@
+#news {
+    width: 100%;  padding: 100px 0 50px 0; position: relative; box-sizing: border-box;
+    .inner {
+        width:1180px; margin: 0 auto; 
+        h1 {
+            font:bold 24px/1 'Noto Sans KR'; color:#333; text-align: center; margin-bottom: 50px; 
+        }
+        ul {
+            width:100%; overflow: hidden;
+            li { 
+                 width:50%;  height: 264px; float: left; padding: 10px; box-sizing: border-box; position: relative; transition: 1s;
+
+                 >.pic { width: 100%; height:100%; background:#bbb; background-repeat: no-repeat; background-position: center center;  background-size: cover; position: relative;
+                   
+                    &::after { background-color:rgba(0,0,0,0.5); content:''; display: block; width:100%; height: 100%; position: absolute; left: 0; top: 0;}
+                    &.pic1 { background-image: url(../img/pic1.jpg);}
+                    &.pic2 { background-image: url(../img/pic2.jpg);}
+                    &.pic3 { background-image: url(../img/pic3.jpg);}
+                    &.pic4 { background-image: url(../img/pic4.jpg);}
+                }
+               
+                
+
+                 >.txt { 
+                     position: absolute; bottom: 0; left:0; padding: 40px;
+                     h2 { font:30px/1 'Noto Sans KR'; color: #fff; margin-bottom: 10px; }
+                     p { font:16px/1.4 'Noto Sans KR'; color:#bbb;  }
+                  } 
+                 
+                  
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:$tablet){
+    #news {
+         padding: 50px 10px 100px 10px;  
+        .inner {
+            width:100%; 
+            ul {
+                
+                li { 
+                     width:50%;  height: 200px; 
+                      
+                     >.txt { 
+                          padding: 30px;
+                         h2 { font:22px/1 'Noto Sans KR';  }
+                         p { font:12px/1.4 'Noto Sans KR';   }
+                      } 
+                     
+                      
+                }
+            }
+        }   
+    
+    }
+}
+
+/* mobile */
+@media screen and (max-width:$mobile){
+    #news {
+        padding: 50px 20px 50px 20px;  
+        .inner {
+            ul {
+                
+                li { 
+                     width:100%;  height: 150px; padding: 5px;
+                      
+                     >.txt { 
+                          padding: 20px;
+                         h2 { font:20px/1 'Noto Sans KR';  }
+                         p { font:12px/1.4 'Noto Sans KR';   }
+                      } 
+                     
+                      
+                }
+            }
+        }   
+
+   }
+}

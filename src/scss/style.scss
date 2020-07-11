@@ -1,0 +1,31 @@
+$tablet : 1179px;
+$mobile : 539px;
+
+//common
+@import 'include/reset';
+
+
+
+//main
+@import 'main/header';
+@import 'main/visual';
+@import 'main/icons';
+@import 'main/news';
+@import 'main/people';
+@import 'main/gallery';
+@import 'main/tab';
+@import 'main/map';
+@import 'main/footer';
+@import 'main/vNavi';
+
+
+
+//sub
+@import 'include/header';
+@import 'include/footer';
+@import 'sub/layout_sub';
+@import 'sub/company';
+@import 'sub/community';
+@import 'sub/member';
+
+

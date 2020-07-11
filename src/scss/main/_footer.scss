@@ -1,0 +1,110 @@
+#footer_main { 
+    width: 100%; position: relative; background: #444;
+    .inner {
+        width: 1180px; margin: 0 auto; 
+        .upper {
+            width: 100%; padding: 30px 0 20px; border-bottom: 1px solid #4d4d4d; text-align: center; box-sizing: border-box;
+            h1 {
+                color:#888; float: left; font:bold 30px/1 'Noto Sans KR'; 
+                
+            }
+          ul {
+               
+              
+              li {
+                  display: inline-block; margin-right: 20px;   
+                  >a {
+                      font:12px/1.6 "Noto Sans KR"; color:#ddd; 
+                  }
+              }
+          }
+        }
+        .lower { 
+            width: 100%; padding: 40px 0 50px;   box-sizing: border-box;
+            
+            .location {
+               
+                &::before {
+                    content: ''; display: block; clear: both;
+                }
+                h2 { 
+                    font:bold 14px/20px "Noto Sans KR"; color:#777;  
+                 margin-right: 10px; display: inline-block;}
+                address {
+                    font: 12px/20px 'Noto Sans KR';color: #888;
+                    letter-spacing: 1px; display: inline-block; 
+                }
+            }
+            p {
+                font:12px/20px "Noto Sans KR"; color:#888; letter-spacing: 1px; 
+                margin-bottom: 50px; 
+            }
+
+            
+            .sns { float: left;
+                ul {
+                    li { 
+                        float: left; display: inline; margin-right: 10px;
+                        a{
+                            font:12px/30px "Noto Sans KR"; color:#888;
+                        }                       
+                         
+                    }
+                }
+            }
+            .map_call {
+                float: right; 
+                a { display: block; font:12px/30px "Noto Sans KR"; color:#888; }
+            }
+           
+            
+        }
+    }
+}
+
+/* tablet */
+@media screen and (max-width:$tablet){
+    #footer_main { 
+        
+        .inner {
+            width: 100%;  padding:0 20px; box-sizing: border-box;
+            .upper {
+                 padding: 30px 0px 20px 0px;  
+                 h1 {
+                    width:100%; margin-bottom: 20px;                   
+                }   
+                      
+              
+            }
+            .lower { 
+                padding: 40px 0px 50px 0px;  
+             
+            }
+        }
+    }
+}
+
+/* mobile */
+@media screen and (max-width:$mobile){
+    #footer_main { 
+        
+        .inner {
+            width: 100%;  
+            .upper {
+                 padding: 30px 0px 20px 0px;  
+                 h1 {
+                    width:100%; margin-bottom: 20px;   float: none;                 
+                }   
+                ul { display: none;}           
+              
+            }
+            .lower { 
+                padding: 40px 0px 50px 0px;  
+                .location {
+                    margin-bottom: 10px;
+                }
+             
+            }
+        }
+    }
+}

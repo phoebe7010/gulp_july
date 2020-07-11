@@ -1,0 +1,12 @@
+gulp_12oo/
+img/
+css/
+js/
+node_modules/
+community.html
+company.html
+gulpfile.js
+index.html
+member.html
+package.json
+package-lock.json

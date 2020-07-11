@@ -1,0 +1,73 @@
+#banner {
+    width:100%; padding:200px 0px; background:#555;
+
+    h1 {
+        font:bold 16px/1 'arial'; color:#fff; text-align:center;
+        margin-bottom:50px;
+        &::after {
+            content:''; display:block; width:70px; height:1px; background:#fff; margin:0px auto; margin-top:20px;
+        }
+    }
+
+    .inner {
+        width:1180px; margin:0px auto; position:relative; 
+
+        .wrap {
+            width:100%; overflow:hidden;
+            >ul.panel {
+                width:calc(25% * 6); margin-left:-25%;
+
+                >li {
+                    width:calc(100% / 6); height:250px; box-sizing:border-box; padding:10px; float:left; 
+                    >div {
+                        width:100%; height:100%; background:#fff;
+                    }
+                }
+                &::after {content:''; display:block; clear:both;}
+            }
+            
+        }  
+
+        .prev {
+            display:block; width:20px; height:100px; background: #000;
+            position:absolute; top:50%; left:-50px; margin-top:-20px;
+        }
+        .next {
+            display:block; width:20px; height:100px; background: #000;
+            position:absolute; top:50%; right:-50px; margin-top:-20px;
+        }
+        
+        
+    }
+}
+
+
+
+@media screen and (max-width:$tablet){
+   #banner>.inner {
+       width:100%; box-sizing:border-box; padding:0px 20px;
+
+       .wrap {
+            >ul.panel {
+                width:calc(33.333% * 6); margin-left:-33.333%;          
+            }
+       }
+
+       .prev {            
+            left:50px;
+        }
+        .next {
+            right:50px;
+        }
+   }
+}
+
+@media screen and (max-width:$mobile){
+    #banner>.inner {  
+        .wrap {
+             >ul.panel {
+                 width:calc(50% * 6); margin-left:-50%;          
+             }
+        }
+    }
+}

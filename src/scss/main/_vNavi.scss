@@ -1,0 +1,26 @@
+#vNavi { 
+    position:fixed; top:50%; right:50px;
+    transform: translateY(-50%); z-index:6;
+
+    li {
+        margin-bottom:30px; 
+        span { font:12px/1 'arial'; color:#333; display: none; margin-left: 10px; ;  }
+        >a {
+            display:inline-block; width:5px; height:5px;   
+            background:#fff; border:1px solid #000; transition: 0.5s;
+            
+            &.on {background:#000; height: 20px;}
+            &:hover { background: #000; }
+            /*
+            &.on+span { display: inline-block;  }
+            &.hover+span { display: inline-block;  }
+            */
+        }
+       
+    }
+}
+
+@media screen and (max-width:$tablet){
+    #vNavi { display: none;}
+   }
+ 
